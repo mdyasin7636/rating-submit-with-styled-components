@@ -1,6 +1,7 @@
 import { createGlobalStyle } from "styled-components";
 
 export const GLobalStyle = createGlobalStyle`
+
 *,
 *::after,
 *::before {
@@ -18,6 +19,7 @@ body {
     display: grid;
     place-items: center;
     padding: 0 1rem;
+    font-family: 'Overpass', sans-serif;
 }
 
-`
+`;
