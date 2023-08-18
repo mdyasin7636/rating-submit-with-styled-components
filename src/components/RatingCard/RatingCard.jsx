@@ -1,14 +1,20 @@
-import { H1, P, RatingCardWrapper, RatingIconBox, StarButton, SubmitButton } from "./ratingCardStyle";
+import {
+  H1,
+  P,
+  RatingCardWrapper,
+  RatingIconBox,
+  StarButton,
+  SubmitButton,
+} from "./ratingCardStyle";
 import Star from "../../assets/star.svg";
 import { useState } from "react";
 
 const RatingCard = () => {
-  
-    const rating = [1, 2, 3, 4, 5];
+  const rating = [1, 2, 3, 4, 5];
 
-    const [selectedRating, setSelectedRating] = useState(0);
+  const [selectedRating, setSelectedRating] = useState(0);
 
-    console.log(selectedRating);
+  console.log(selectedRating);
 
   return (
     <RatingCardWrapper>
@@ -20,9 +26,14 @@ const RatingCard = () => {
         Please let us know how we did with your support request. All feedback is
         appreciated to help us improve our offering.
       </P>
-      {
-        rating.map((item, i) => (<StarButton as='button' key={i} onClick={() => setSelectedRating(item)}>{item}</StarButton>))
-      }
+      {rating.map((item, i) => (
+        <StarButton as="button" key={i} 
+        onClick={() => setSelectedRating(item)}
+        selected={selectedRating === i + 1}
+        >
+          {item}
+        </StarButton>
+      ))}
       <SubmitButton>Submit</SubmitButton>
     </RatingCardWrapper>
   );

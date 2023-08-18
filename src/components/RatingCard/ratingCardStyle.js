@@ -51,6 +51,9 @@ font-weight: 700;
     background-color: hsl(25, 97%, 53%);
     transition: all 0.2s;
 }
+
+background-color: ${({selected}) => selected ? 'hsl(25, 97%, 53%)' : 'hsl(210, 16%, 22%)'};
+
 `
 
 export const SubmitButton = styled.button`
