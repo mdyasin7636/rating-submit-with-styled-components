@@ -7,7 +7,7 @@ max-width: 450px;
 min-width: 450px;
 /* background: white; */
 padding: 2.2rem;
-background-color: hsl(213, 19%, 18%);
+background-color: ${({theme}) => theme.mode === 'dark' ? theme.colors.darkBlue : theme.colors.white};
 `;
 
 export const RatingIconBox = styled.div`
